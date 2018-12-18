@@ -63,12 +63,13 @@ namespace MessageAggregator
 
         }
 
-
         private void BerichtenBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var itemIndex = BerichtenBox.Items.IndexOf(BerichtenBox.SelectedItem);
+            var bericht = Store.Messages[itemIndex];
 
+            InfoBox.Text = bericht.GetMessageInfo();
         }
-
     }
 
 }
