@@ -24,7 +24,12 @@ namespace MessageAggregator
         public MainWindow()
         {
             InitializeComponent();
+            initializeStore();
+            initializeListBoxes();
+        }
 
+        private void initializeStore()
+        {
             Store = new MessageStore();
             Store.Tweets.Add(new Tweet("progger", "CSharp", "Learning WPF"));
             Store.Tweets.Add(new Tweet("acc1", "GUI", "Writing GUI with WPF is easy"))
@@ -33,6 +38,17 @@ namespace MessageAggregator
             Store.PostIts.Add(new PostIt("Someone", "Somewhere", "Something"));
         }
 
+        private void initializeListBoxes()
+        {
+            foreach (var tweet in Store.Tweets)
+            {
+                TweetsBox.Items.Add(tweet.ToString());
+            }
+            foreach (var postit in Store.PostIts)
+            {
+                PostitsBox.Items.Add(postit.ToString();
+            }
+        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -76,6 +92,7 @@ namespace MessageAggregator
 
             InfoBox.Text = bericht.GetMessageInfo();
         }
+
     }
 
 }
