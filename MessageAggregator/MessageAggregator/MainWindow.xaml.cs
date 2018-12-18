@@ -30,12 +30,16 @@ namespace MessageAggregator
 
         private void initializeStore()
         {
-            Store = new MessageStore();
-            Store.Tweets.Add(new Tweet("progger", "CSharp", "Learning WPF"));
-            Store.Tweets.Add(new Tweet("acc1", "GUI", "Writing GUI with WPF is easy"))
-            Store.PostIts.Add(new PostIt("Jef", "PC", "Backup nemen!"));
-            Store.PostIts.Add(new PostIt("Bella", "Koelkast", "Winkel passeren!"));
-            Store.PostIts.Add(new PostIt("Someone", "Somewhere", "Something"));
+            var tweets = new ArrayList<Tweet> {
+                new Tweet("progger", "CSharp", "Learning WPF"),
+                new Tweet("acc1", "GUI", "Writing GUI with WPF is easy")
+            };
+            var postits = new ArrayList<PostIt> {
+                new PostIt("Jef", "PC", "Backup nemen!"),
+                new PostIt("Bella", "Koelkast", "Winkel passeren!"),
+                new PostIt("Someone", "Somewhere", "Something")
+            };
+            Store = new MessageStore(tweets, postits);
         }
 
         private void initializeListBoxes()
