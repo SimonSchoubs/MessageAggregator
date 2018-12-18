@@ -50,7 +50,7 @@ namespace MessageAggregator
             }
             foreach (var postit in Store.PostIts)
             {
-                PostitsBox.Items.Add(postit.ToString();
+                PostitsBox.Items.Add(postit.ToString());
             }
         }
 
