@@ -20,25 +20,40 @@ namespace MessageAggregator
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MessageStore Store { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            Store = new MessageStore();
         }
 
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            var itemIndex = TweetBox.Items.IndexOf(TweetsBox.SelectedItem);
+            var tweet = MessageStore.Tweets[itemIndex];
 
+            Store.Messages.Add(tweet);
+            MessagesBox.Items.Add(tweet.HashTag);
+
+            Store.Tweets.RemoveAt(itemIndex);
+            TweetsBox.Items.RemoveAt(itemIndex);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            var itemIndex = PostitsBox.Items.IndexOf(PostitsBox.SelectedItem);
+            var postit = Store.PostIts[itemIndex];
 
+            Store.Messages.Add(postit);
+            MessageBox.Items.Add(postit.Location);
+
+            Store.PostIts.RemoveAt(itemIndex);
+            PostitsBox.Items.RemoveAt(itemIndex);
         }
 
         private void TweetsBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
         }
 
         private void PostitsBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
