@@ -3,6 +3,7 @@ namespace MessageAggregator
 {
     public class PostIt : IMessage
     {
+        public string Message { get; set; }
         public string From { get; set; }
         public string Location { get; set; }
 
@@ -20,7 +21,7 @@ namespace MessageAggregator
 
         public string GetMessageInfo()
         {
-            result = "--- PostIt ---\n";
+            var result = "--- PostIt ---\n";
             result += "Van: " + From + "\n";
             result += "Locatie: " + Location + "\n";
             result += "Boodschap: " + Message + "\n";

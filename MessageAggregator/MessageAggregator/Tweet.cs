@@ -3,6 +3,7 @@ namespace MessageAggregator
 {
     public class Tweet : IMessage
     {
+        public string Message { get; set; }
         public string Account { get; set; }
         public string HashTag { get; set; }
 
@@ -20,7 +21,7 @@ namespace MessageAggregator
 
         public string GetMessageInfo()
         {
-            result = "--- Tweet ---\n";
+            var result = "--- Tweet ---\n";
             result += "Tweet account: " + Account + "\n";
             result += "HashTag: " + HashTag + "\n";
             result += "Boodschap: " + Message + "\n";

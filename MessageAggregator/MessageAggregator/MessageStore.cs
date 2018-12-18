@@ -12,10 +12,10 @@ namespace MessageAggregator
         {
             Tweets = tweets;
             PostIts = postits;
-            Messages = new ArrayList<IMessage>();
+            Messages = new List<IMessage>();
         }
 
-        public AddMessage(IMessage message)
+        public void AddMessage(IMessage message)
         {
             Messages.Add(message);
         }
