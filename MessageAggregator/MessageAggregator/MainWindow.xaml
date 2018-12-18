@@ -10,9 +10,9 @@
         <Label Content="Tweets" HorizontalAlignment="Left" Margin="39,56,0,0" VerticalAlignment="Top"/>
         <Label Content="Postits" HorizontalAlignment="Left" Margin="39,169,0,0" VerticalAlignment="Top"/>
         <Label Content="Berichten" HorizontalAlignment="Left" Margin="553,28,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="PostitsBox" HorizontalAlignment="Left" Height="89" Margin="39,195,0,0" VerticalAlignment="Top" Width="218"/>
-        <ListBox x:Name="TweetsBox" HorizontalAlignment="Left" Height="89" Margin="39,80,0,0" VerticalAlignment="Top" Width="218"/>
-        <ListBox x:Name="BerichtenBox" HorizontalAlignment="Left" Height="131" Margin="429,59,0,0" VerticalAlignment="Top" Width="340"/>
+        <ListBox x:Name="PostitsBox" HorizontalAlignment="Left" Height="89" Margin="39,195,0,0" VerticalAlignment="Top" Width="218" SelectionChanged="PostitsBox_SelectionChanged"/>
+        <ListBox x:Name="TweetsBox" HorizontalAlignment="Left" Height="89" Margin="39,80,0,0" VerticalAlignment="Top" Width="218" SelectionChanged="TweetsBox_SelectionChanged"/>
+        <ListBox x:Name="BerichtenBox" HorizontalAlignment="Left" Height="131" Margin="429,59,0,0" VerticalAlignment="Top" Width="340" SelectionChanged="BerichtenBox_SelectionChanged"/>
         <TextBox x:Name="InfoBox" HorizontalAlignment="Left" Height="198" Margin="429,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="340"/>
         <Button Content="Stuur tweet" HorizontalAlignment="Left" Margin="320,89,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Button Content="Plak postit" HorizontalAlignment="Left" Margin="320,207,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>

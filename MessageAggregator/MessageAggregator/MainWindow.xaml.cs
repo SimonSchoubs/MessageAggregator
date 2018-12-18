@@ -50,15 +50,25 @@ namespace MessageAggregator
 
             Store.PostIts.RemoveAt(itemIndex);
             PostitsBox.Items.RemoveAt(itemIndex);
-        }
 
-        private void TweetsBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
         }
 
         private void PostitsBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
+
+        private void TweetsBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+
+        private void BerichtenBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
     }
+
 }
