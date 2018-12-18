@@ -36,5 +36,14 @@ namespace MessageAggregator
 
         }
 
+        private void TweetsBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void PostitsBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
