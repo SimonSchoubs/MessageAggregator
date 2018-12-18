@@ -24,7 +24,13 @@ namespace MessageAggregator
         public MainWindow()
         {
             InitializeComponent();
+
             Store = new MessageStore();
+            Store.Tweets.Add(new Tweet("progger", "CSharp", "Learning WPF"));
+            Store.Tweets.Add(new Tweet("acc1", "GUI", "Writing GUI with WPF is easy"))
+            Store.PostIts.Add(new PostIt("Jef", "PC", "Backup nemen!"));
+            Store.PostIts.Add(new PostIt("Bella", "Koelkast", "Winkel passeren!"));
+            Store.PostIts.Add(new PostIt("Someone", "Somewhere", "Something"));
         }
 
 
